@@ -1,7 +1,10 @@
-const { expect } = require('chai')
+const {expect} = require('chai')
 const { describe, it } = require('mocha')
-const calculateScore = require('./scoring')
+const calculateScore = require('../scoring')
 
+//1 point for every 25 yards passing, 6 points for every passing touchdown, 
+//-3 points for every interception, 1 point for every 10 yards rushing, 6 points for every rushing touchdown,
+// -3 points for every rushing fumble
 describe('calculateScore', () => {
   it('returns the score for a quarterback', function () {
     const player = {
